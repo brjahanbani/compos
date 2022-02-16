@@ -1,3 +1,17 @@
-<!-- <app-elements-home></app-elements-home>
-<app-collections-home></app-collections-home> -->
-<router-outlet></router-outlet>
+<div class="ui container">
+  <div class="ui pointing menu">
+    <a class="item" routerLinkActive="active" [routerLink]="['/collections']">Collections</a>
+    <a class="item" routerLinkActive="active" routerLink="/elements">Elements</a>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui segment">
+    <router-outlet></router-outlet>
+  </div>
+</div>
