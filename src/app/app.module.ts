@@ -10,7 +10,13 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
-  imports: [BrowserModule, ElementsModule, CollectionsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+
+    // CollectionsModule, to Lazy Load
+    // ElementsModule, to Lazy Load
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
