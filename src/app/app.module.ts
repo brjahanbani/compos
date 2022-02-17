@@ -12,7 +12,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
   imports: [
     BrowserModule,
-
     // CollectionsModule, to Lazy Load
     // ElementsModule, to Lazy Load
     AppRoutingModule,
