@@ -1,26 +1,16 @@
-<table class="ui celled table">
+<table class="ui table" [ngClass]="className">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Job</th>
+      <ng-container *ngFor="let header of headers">
+        <th *ngIf="header.show">{{header.value}}</th>
+      </ng-container>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td data-label="Name">James</td>
-      <td data-label="Age">24</td>
-      <td data-label="Job">Engineer</td>
-    </tr>
-    <tr>
-      <td data-label="Name">Jill</td>
-      <td data-label="Age">26</td>
-      <td data-label="Job">Engineer</td>
-    </tr>
-    <tr>
-      <td data-label="Name">Elyse</td>
-      <td data-label="Age">24</td>
-      <td data-label="Job">Designer</td>
+    <tr *ngFor="let item of data">
+      <ng-container *ngFor="let header of headers">
+        <td *ngIf="header.show">{{item[header.key]}}</td>
+      </ng-container>
     </tr>
   </tbody>
 </table>
