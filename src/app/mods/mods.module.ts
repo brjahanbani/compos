@@ -5,9 +5,10 @@ import { ModsRoutingModule } from './mods-routing.module';
 import { ModsHomeComponent } from './mods-home/mods-home.component';
 import { ModalsComponent } from './modals/modals.component';
 import { SharedModule } from '../shared/shared.module';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
-  declarations: [ModsHomeComponent, ModalsComponent],
+  declarations: [ModsHomeComponent, ModalsComponent, AccordionComponent],
   imports: [CommonModule, ModsRoutingModule, SharedModule],
 })
 export class ModsModule {}
