@@ -1,3 +1,6 @@
 <app-divider>Modal Component</app-divider>
 <button class="ui green button" (click)="onChangeModal()">Show Modal</button>
-<app-modals *ngIf="showModal" (onClose)="showModal=false"></app-modals>
+<app-modals (onClose)="showModal=false" *ngIf="showModal">
+  <h2 modal-header>Modal Header</h2>
+  <h3 modal-content>This is Content</h3>
+</app-modals>
