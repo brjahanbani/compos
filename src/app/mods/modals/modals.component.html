@@ -1,14 +1,14 @@
-<div class="ui dimmer visible active">
-  <div class="ui modal visible active">
-    <i class="close icon"></i>
+<div (click)="onCloseClick()" class="ui dimmer visible active">
+  <div (click)="$event.stopPropagation()" class="ui modal visible active">
+    <i class="close icon" (click)="onCloseClick()"></i>
     <div class="header">Header</div>
     <div class="content">
       <p>This is Content</p>
     </div>
     <div class="actions">
-      <div class="ui approve button">Approve</div>
+      <div class="ui approve button" (click)="onCloseClick()">Approve</div>
       <!-- <div class="ui button">Neutral</div> -->
-      <div class="ui cancel button">Cancel</div>
+      <div class="ui cancel button" (click)="onCloseClick()">Cancel</div>
     </div>
   </div>
 </div>
